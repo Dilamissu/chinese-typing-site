@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <title>Chinese Typing Site</title>
+
+  <style>
+    #PhaseTitle{
+      text-align: center;
+    }
+    #Phases{
+      text-align: center;
+    }
+
+    #PhaseButtonContainer{
+      display: flex;
+      justify-content: space-between;
+    }
+    .PhaseButton {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px;
+      margin: 10px 10px;
+      width: 50%;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .PhaseButton:disabled{
+      background-color: #bcbcbc;
+      cursor: default;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1 id="PhaseTitle"> {{ title }}</h1>
+    <p id="Phases">{{ content }}: {{ line }}</p>
+
+    <div id="PhaseButtonContainer">
+      <button class="PhaseButton" :disabled="line == 1" @click="subLine">Previous Phase</button>
+      <button class="PhaseButton" @click="addLine">Next Phase</button>
+    </div>
+  </div>
+
+  <script src="src/main.js"></script>
+</body>
+</html>
