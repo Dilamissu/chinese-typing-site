@@ -1,6 +1,7 @@
 # chinese-typing-site
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a traditional chinese typing practice website.
+It's now work in process.
 
 ## Recommended IDE Setup
 
